@@ -13,4 +13,21 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require handlebars
+//= require ember
+//= require ember-data
+//= require localstorage_adapter
+//= require test
+//= require_self
+//= require router
+//= require_tree ./controllers
+//= require_tree ./models
+//= require_tree ./views
+
+window.Todos = Ember.Application.create();
+
+Todos.ApplicationAdapter = DS.LSAdapter.extend({
+    namespace: 'todos-emberjs'
+});
+
+//Todos.Store = DS.Store.extend();
