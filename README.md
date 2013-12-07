@@ -12,32 +12,35 @@ Check the docs at https://github.com/rails-api/active_model_serializers
 Things I had to change:
 
 ```shell
-app/assets/javascripts/application.js```
+app/assets/javascripts/application.js
+```
 
 Get rid of this:
-```ruby
+```javascript
     Todos.ApplicationAdapter = DS.LSAdapter.extend({
    	namespace: 'todos-emberjs'
    });
 ```
 
 Add this:
-```ruby
+```javascript
 Todos.Store = DS.Store.extend({});
 ```
 
 Change 'todo' model references to Todos.Todo:
 
 ```shell
-app/assets/javascripts/controllers/todos_controller.js:```
-```ruby
+app/assets/javascripts/controllers/todos_controller.js:
+```
+```javascript
 			var todo = this.store.createRecord('todo', { // change this
 			var todo = this.store.createRecord(Todos.Todo, { // to this
 ```
 
 ```shell
-app/assets/javascripts/router.js```
-```ruby
+app/assets/javascripts/router.js
+```
+```javascript
  Todos.TodosActiveRoute = Ember.Route.extend({
     	model: function(){
    		return this.store.filter('todo', function(todo){ // change this
