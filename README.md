@@ -1,5 +1,5 @@
-== README
-
+README
+======
 Demonstration of Ember MVC Todo tutorial app converted to work with rails back end.
 
 This works with Rails 4.0.1.
@@ -16,16 +16,19 @@ Things I had to change:
 Get rid of this:
 ```Todos.ApplicationAdapter = DS.LSAdapter.extend({
    	namespace: 'todos-emberjs'
-   });```
+   });
+```
 
 Add this:
-```Todos.Store = DS.Store.extend({});```
+```Todos.Store = DS.Store.extend({});
+```
 
 Change 'todo' model references to Todos.Todo:
 
 ```app/assets/javascripts/controllers/todos_controller.js:```
 ```			var todo = this.store.createRecord('todo', { // change this
-			var todo = this.store.createRecord(Todos.Todo, { // to this```
+			var todo = this.store.createRecord(Todos.Todo, { // to this
+```
 
 ```app/assets/javascripts/router.js```
 ``` Todos.TodosActiveRoute = Ember.Route.extend({
@@ -36,13 +39,16 @@ Change 'todo' model references to Todos.Todo:
  Todos.TodosCompletedRoute = Ember.Route.extend({
  	model: function(){
 		return this.store.filter('todo', function(todo){ // change this
-		return this.store.filter(Todos.Todo, function(todo){ // to this```
+		return this.store.filter(Todos.Todo, function(todo){ // to this
+```
 
-= Issues:
-
+Issues:
+-------
 Modifying an item's title works, but throws an error:
 ```Uncaught Error: Attempted to handle event `willCommit`
-on <Todos.Todo:ember402:5> while in state root.loaded.updated.inFlight.```
+on <Todos.Todo:ember402:5> while in state root.loaded.updated.inFlight.
+```
 
-= Todo:
+Todo:
+-----
 Move the handlebars templates into .js files under views.
