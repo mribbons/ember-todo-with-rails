@@ -9,7 +9,17 @@ I moved a few files around from the original app to make it more railsy.
 Using the serializer gem puts things in the format ember likes.
 Check the docs at https://github.com/rails-api/active_model_serializers
 
-Things I had to change:
+Installation
+------------
+```shell
+git clone https://github.com/mribbons/ember-todo-with-rails
+cd ember-todo-with-rails
+bundle install
+rake db:migrate
+```
+
+Changes
+-------
 
 ```shell
 app/assets/javascripts/application.js
