@@ -3,6 +3,11 @@ Todos.Todo = DS.Model.extend({
 	isCompleted: DS.attr('boolean')
 });
 
+/*Todos.Todo = Ember.Resource.extend({
+    resourceUrl: '/todos',
+    resourceName: 'todo'
+});*/
+
 Todos.Todo.FIXTURES = [
 {
 	id: 1,

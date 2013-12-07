@@ -4,6 +4,8 @@ source 'http://rubygems.org'
 gem 'rails', '4.0.1'
 
 gem 'handlebars_assets', :github => 'leshill/handlebars_assets'
+gem 'ember-rails'
+gem 'active_model_serializers', :github => 'rails-api/active_model_serializers'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'

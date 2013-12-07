@@ -16,7 +16,6 @@
 //= require handlebars
 //= require ember
 //= require ember-data
-//= require localstorage_adapter
 //= require test
 //= require_self
 //= require router
@@ -24,10 +23,12 @@
 //= require_tree ./models
 //= require_tree ./views
 
-window.Todos = Ember.Application.create();
+window.Todos = Ember.Application.create({
 
-Todos.ApplicationAdapter = DS.LSAdapter.extend({
-    namespace: 'todos-emberjs'
+    // log when Ember generates a controller or a route from a generic class
+    LOG_ACTIVE_GENERATION: true,
+    // log when Ember looks up a template or a view
+    LOG_VIEW_LOOKUPS: true
 });
 
-//Todos.Store = DS.Store.extend();
+Todos.Store = DS.Store.extend({});

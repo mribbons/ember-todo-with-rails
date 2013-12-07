@@ -18,9 +18,15 @@ Todos.TodosIndexRoute = Ember.Route.extend({
 	}
 });
 
+Todos.TodosNewRoute = Todos.TodosRoute.extend({
+    model: function(){
+        Todos.Todo.createRecord();
+    }
+});
+
 Todos.TodosActiveRoute = Ember.Route.extend({
 	model: function(){
-		return this.store.filter('todo', function(todo){
+		return this.store.filter(Todos.Todo, function(todo){
 			return !todo.get('isCompleted');
 		});
 	},
@@ -31,7 +37,7 @@ Todos.TodosActiveRoute = Ember.Route.extend({
 
 Todos.TodosCompletedRoute = Ember.Route.extend({
 	model: function(){
-		return this.store.filter('todo', function(todo){
+		return this.store.filter(Todos.Todo, function(todo){
 			return todo.get('isCompleted');
 		});
 	},

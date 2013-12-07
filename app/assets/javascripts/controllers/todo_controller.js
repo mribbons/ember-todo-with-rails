@@ -1,3 +1,5 @@
+Todos.IndexController = Ember.ObjectController.extend({});
+
 Todos.TodoController = Ember.ObjectController.extend({
 	isCompleted: function(key, value) {
 		var model = this.get('model');

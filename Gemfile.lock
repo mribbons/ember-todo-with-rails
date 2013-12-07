@@ -8,6 +8,13 @@ GIT
       sprockets (>= 2.0.3)
       tilt
 
+GIT
+  remote: git://github.com/rails-api/active_model_serializers.git
+  revision: 2faa571a9cfac95f992449fe0417a1d7774b84fc
+  specs:
+    active_model_serializers (0.9.0.pre)
+      activemodel (>= 3.2)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -37,6 +44,10 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.1)
     atomic (1.1.14)
+    barber (0.4.2)
+      ember-source
+      execjs
+      handlebars-source
     builder (3.1.4)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -45,8 +56,22 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    ember-data-source (0.14)
+      ember-source
+    ember-rails (0.14.1)
+      active_model_serializers
+      barber (>= 0.4.1)
+      ember-data-source
+      ember-source
+      execjs (>= 1.2)
+      handlebars-source
+      jquery-rails (>= 1.0.17)
+      railties (>= 3.1)
+    ember-source (1.2.0.1)
+      handlebars-source (~> 1.1.2)
     erubis (2.7.0)
     execjs (2.0.2)
+    handlebars-source (1.1.2)
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (1.5.3)
@@ -118,7 +143,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers!
   coffee-rails (~> 4.0.0)
+  ember-rails
   handlebars_assets!
   jbuilder (~> 1.2)
   jquery-rails
