@@ -16,7 +16,6 @@
 //= require handlebars
 //= require ember
 //= require ember-data
-//= require test
 //= require_self
 //= require router
 //= require_tree ./controllers

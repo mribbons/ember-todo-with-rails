@@ -1,6 +1,6 @@
 == README
 
-Converted Ember MVC Todo tutorial app to work with rails back end.
+Demonstration of Ember MVC Todo tutorial app converted to work with rails back end.
 
 This works with Rails 4.0.1.
 
