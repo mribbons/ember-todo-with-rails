@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131207085127) do
+ActiveRecord::Schema.define(version: 20131207002247) do
 
   create_table "todos", force: true do |t|
     t.string   "title"
