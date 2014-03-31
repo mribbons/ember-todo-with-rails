@@ -72,8 +72,14 @@ GEM
     erubis (2.7.0)
     execjs (2.0.2)
     handlebars-source (1.1.2)
+    has_scope (0.6.0.rc)
+      actionpack (>= 3.2, < 5)
+      activesupport (>= 3.2, < 5)
     hike (1.2.3)
     i18n (0.6.9)
+    inherited_resources (1.4.1)
+      has_scope (~> 0.6.0.rc)
+      responders (~> 1.0.0.rc)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
@@ -107,6 +113,8 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    responders (1.0.0)
+      railties (>= 3.2, < 5)
     sass (3.2.12)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -147,6 +155,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   ember-rails
   handlebars_assets!
+  inherited_resources
   jbuilder (~> 1.2)
   jquery-rails
   rails (= 4.0.1)
