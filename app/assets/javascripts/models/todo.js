@@ -1,6 +1,6 @@
 Todos.Todo = DS.Model.extend({
 	title: DS.attr('string'),
-	isCompleted: DS.attr('boolean')
+	is_completed: DS.attr('boolean')
 });
 
 /*Todos.Todo = Ember.Resource.extend({
@@ -12,16 +12,16 @@ Todos.Todo.FIXTURES = [
 {
 	id: 1,
 	title: 'Learn ember.js',
-	isCompleted: true
+	is_completed: true
 },
 {
 	id: 2,
 	title: '...',
-	isCompleted: false
+	is_completed: false
 },
 {
 	id: 3,
 	title: 'Profit!',
-	isCompleted: false
+	is_completed: false
 }
 ];
