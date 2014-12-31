@@ -42,8 +42,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
-    ember-data-source (1.0.0.beta.14)
-      ember-source
+    ember-data-source (1.0.0.beta.14.1)
+      ember-source (~> 1.8)
     ember-rails (0.16.0)
       active_model_serializers
       barber (>= 0.6.0)
