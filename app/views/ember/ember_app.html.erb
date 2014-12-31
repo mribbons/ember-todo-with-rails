@@ -3,15 +3,15 @@
 
 <script type="text/x-handlebars" data-template-name="todos/index">
   <ul id="todo-list">
-    {{#each itemController="todo"}}
+    {{#each t in model itemController="todo"}}
     <li {{bind-attr class="is_completed:completed isEditing:editing"}}>
-    {{#if isEditing}}
-    {{edit-todo class="edit" value=title focus-out="acceptChanges" insert-newline="acceptChanges"}}
-    {{else}}
-    {{input type="checkbox" checked=is_completed class="toggle"}}
-    <label {{action "editTodo" on="doubleClick"}}>{{title}}</label>
-    <button {{action "removeTodo"}} class="destroy"></button>
-    {{/if}}
+      {{#if isEditing}}
+        {{edit-todo class="edit" value=title focus-out="acceptChanges" insert-newline="acceptChanges"}}
+      {{else}}
+        {{input type="checkbox" checked=t.is_completed class="toggle"}}
+        <label {{action "editTodo" on="doubleClick"}}>{{t.title}}</label>
+        <button {{action "removeTodo"}} class="destroy"></button>
+      {{/if}}
     </li>
     {{/each}}
   </ul>
