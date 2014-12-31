@@ -30,4 +30,4 @@ window.Todos = Ember.Application.create({
     LOG_VIEW_LOOKUPS: true
 });
 
-Todos.Store = DS.Store.extend({});
+Todos.ApplicationStore = DS.Store.extend({});
