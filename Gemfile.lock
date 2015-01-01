@@ -44,7 +44,7 @@ GEM
     coffee-script-source (1.8.0)
     ember-data-source (1.0.0.beta.14.1)
       ember-source (~> 1.8)
-    ember-rails (0.16.0)
+    ember-rails (0.16.1)
       active_model_serializers
       barber (>= 0.6.0)
       ember-data-source (>= 1.0.0.beta.5)
@@ -137,7 +137,7 @@ GEM
       thread_safe (~> 0.1)
     tzinfo-data (1.2014.10)
       tzinfo (>= 1.0.0)
-    uglifier (2.6.0)
+    uglifier (2.6.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
 
