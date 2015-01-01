@@ -6,9 +6,9 @@
 <script type="text/x-handlebars" data-template-name="todos/index">
   <ul id="todo-list">
     {{#each t in model itemController="todo"}}
-    <li {{bind-attr class="is_completed:completed isEditing:editing"}}>
-      {{#if isEditing}}
-        {{edit-todo class="edit" value=title focus-out="acceptChanges" insert-newline="acceptChanges"}}
+    <li {{bind-attr class="t.is_completed:completed t.isEditing:editing"}}>
+      {{#if t.isEditing}}
+        {{edit-todo class="edit" value=t.title focus-out="acceptChanges" insert-newline="acceptChanges"}}
       {{else}}
         {{input type="checkbox" checked=t.is_completed class="toggle"}}
         <label {{action "editTodo" on="doubleClick"}}>{{t.title}}</label>
