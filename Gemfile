@@ -5,6 +5,7 @@ gem 'rails', '4.1.9'
 
 gem 'handlebars_assets'
 gem 'ember-rails'
+gem 'ember-source', '~> 1.9.1'
 gem 'inherited_resources'
 
 # Use sqlite3 as the database for Active Record
