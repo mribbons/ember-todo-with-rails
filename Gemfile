@@ -3,8 +3,7 @@ source 'http://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.9'
 
-gem 'handlebars_assets'
-gem 'ember-rails'
+gem 'ember-rails', '~> 0.16.4'
 gem 'ember-source'
 gem 'inherited_resources'
 
