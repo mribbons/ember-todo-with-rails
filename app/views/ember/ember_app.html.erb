@@ -8,10 +8,10 @@
     {{#each t in model itemController="todo"}}
     <li {{bind-attr class="t.is_completed:completed t.isEditing:editing"}}>
       {{#if t.isEditing}}
-        {{edit-todo class="edit" value=t.title focus-out="acceptChanges" insert-newline="acceptChanges"}}
+        {{edit-todo class="edit" value=t.model.title focus-out="acceptChanges" insert-newline="acceptChanges"}}
       {{else}}
         {{input type="checkbox" checked=t.is_completed class="toggle"}}
-        <label {{action "editTodo" on="doubleClick"}}>{{t.title}}</label>
+        <label {{action "editTodo" on="doubleClick"}}>{{t.model.title}}</label>
         <button {{action "removeTodo"}} class="destroy"></button>
       {{/if}}
     </li>
