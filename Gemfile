@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.1.10'
 
-gem 'ember-rails', '~> 0.16.4'
+gem 'ember-rails'
 gem 'ember-source', '~> 1.10.1'
 gem 'inherited_resources'
 
