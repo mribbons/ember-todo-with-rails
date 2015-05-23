@@ -4,7 +4,7 @@ source 'http://rubygems.org'
 gem 'rails', '~> 4.1.10'
 
 gem 'ember-rails'
-gem 'ember-source', '~> 1.10.1'
+gem 'ember-source', '~> 1.11.3'
 gem 'inherited_resources'
 
 # Use sqlite3 as the database for Active Record
