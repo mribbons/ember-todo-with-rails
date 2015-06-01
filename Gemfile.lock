@@ -54,7 +54,7 @@ GEM
       ember-source (>= 1.1.0)
       jquery-rails (>= 1.0.17)
       railties (>= 3.1)
-    ember-source (1.11.3.1)
+    ember-source (1.12.1)
     erubis (2.7.0)
     execjs (2.5.2)
     has_scope (0.6.0)
@@ -139,7 +139,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.1)
   ember-rails
-  ember-source (~> 1.11.3)
+  ember-source (~> 1.12.1)
   inherited_resources
   jbuilder (~> 2.2)
   jquery-rails
