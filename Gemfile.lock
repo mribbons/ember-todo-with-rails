@@ -43,9 +43,10 @@ GEM
     coffee-script-source (1.9.1.1)
     ember-data-source (1.0.0.beta.18)
       ember-source (~> 1.8)
-    ember-handlebars-template (0.1.5)
+    ember-handlebars-template (0.2.1)
       barber (>= 0.9.0)
-      sprockets (>= 2.1, < 3.1)
+      sprockets (>= 2.1, < 3.2)
+      tilt
     ember-rails (0.18.2)
       active_model_serializers
       ember-data-source (>= 1.0.0.beta.5)
@@ -59,7 +60,6 @@ GEM
     has_scope (0.6.0)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
-    hike (1.2.3)
     i18n (0.7.0)
     inherited_resources (1.6.0)
       actionpack (>= 3.2, < 5)
@@ -75,8 +75,8 @@ GEM
     json (1.8.2)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
-    mime-types (2.5)
-    minitest (5.6.1)
+    mime-types (2.6.1)
+    minitest (5.7.0)
     multi_json (1.11.0)
     rack (1.5.3)
     rack-test (0.6.3)
@@ -101,20 +101,18 @@ GEM
       json (~> 1.4)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
-    sass (3.2.19)
-    sass-rails (4.0.5)
+    sass (3.4.14)
+    sass-rails (5.0.3)
       railties (>= 4.0.0, < 5.0)
-      sass (~> 3.2.2)
-      sprockets (~> 2.8, < 3.0)
-      sprockets-rails (~> 2.0)
+      sass (~> 3.1)
+      sprockets (>= 2.8, < 4.0)
+      sprockets-rails (>= 2.0, < 4.0)
+      tilt (~> 1.1)
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-    sprockets (2.12.3)
-      hike (~> 1.2)
-      multi_json (~> 1.0)
+    sprockets (3.1.0)
       rack (~> 1.0)
-      tilt (~> 1.1, != 1.3.0)
     sprockets-rails (2.3.1)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
@@ -146,9 +144,12 @@ DEPENDENCIES
   jbuilder (~> 2.2)
   jquery-rails
   rails (~> 4.1.10)
-  sass-rails (~> 4.0.5)
+  sass-rails
   sdoc
   sqlite3
   turbolinks
   tzinfo-data
   uglifier
+
+BUNDLED WITH
+   1.10.2
