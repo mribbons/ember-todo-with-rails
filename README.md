@@ -40,33 +40,6 @@ Add this:
 Todos.Store = DS.Store.extend({});
 ```
 
-Change 'todo' model references to Todos.Todo:
-
-```shell
-app/assets/javascripts/controllers/todos_controller.js:
-```
-
-```javascript
-			var todo = this.store.createRecord('todo', { // change this
-			var todo = this.store.createRecord(Todos.Todo, { // to this
-```
-
-```shell
-app/assets/javascripts/router.js
-```
-
-```javascript
- Todos.TodosActiveRoute = Ember.Route.extend({
-    	model: function(){
-   		return this.store.filter('todo', function(todo){ // change this
-   		return this.store.filter(Todos.Todo, function(todo){ // to this
-
- Todos.TodosCompletedRoute = Ember.Route.extend({
- 	model: function(){
-		return this.store.filter('todo', function(todo){ // change this
-		return this.store.filter(Todos.Todo, function(todo){ // to this
-```
-
 Issues:
 -------
 Modifying an item's title works, but throws an error:

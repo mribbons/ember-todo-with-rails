@@ -26,7 +26,7 @@ Todos.TodosNewRoute = Todos.TodosRoute.extend({
 
 Todos.TodosActiveRoute = Ember.Route.extend({
 	model: function(){
-		return this.store.filter(Todos.Todo, function(todo){
+		return this.store.filter('todo', function(todo){
 			return !todo.get('is_completed');
 		});
 	},
@@ -37,7 +37,7 @@ Todos.TodosActiveRoute = Ember.Route.extend({
 
 Todos.TodosCompletedRoute = Ember.Route.extend({
 	model: function(){
-		return this.store.filter(Todos.Todo, function(todo){
+		return this.store.filter('todo', function(todo){
 			return todo.get('is_completed');
 		});
 	},
