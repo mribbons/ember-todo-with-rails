@@ -81,6 +81,7 @@ GEM
     mime-types (2.6.1)
     minitest (5.7.0)
     multi_json (1.11.2)
+    puma (2.12.2)
     rack (1.5.5)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -146,6 +147,7 @@ DEPENDENCIES
   inherited_resources
   jbuilder (~> 2.2)
   jquery-rails
+  puma
   rails (~> 4.1.12)
   sass-rails
   sdoc
