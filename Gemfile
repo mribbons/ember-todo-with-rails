@@ -1,10 +1,11 @@
-source 'http://rubygems.org'
+source 'https://gems.ruby-china.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 4.1.12'
+gem 'rails', '~> 4.1.15'
 
 gem 'ember-rails'
-gem 'ember-source', '~> 1.12.1'
+gem 'ember-source', '~> 1.12.2'
+gem 'ember-data-source', '~> 1.13.15'
 gem 'inherited_resources'
 
 # Use sqlite3 as the database for Active Record
