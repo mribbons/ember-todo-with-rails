@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require handlebars
+//= require ember-template-compiler
 //= require ember
 //= require ember-data
 //= require_self
@@ -23,11 +23,10 @@
 //= require_tree ./views
 
 window.Todos = Ember.Application.create({
-
     // log when Ember generates a controller or a route from a generic class
     LOG_ACTIVE_GENERATION: true,
     // log when Ember looks up a template or a view
     LOG_VIEW_LOOKUPS: true
 });
 
-Todos.Store = DS.Store.extend({});
+Todos.ApplicationStore = DS.Store.extend({});

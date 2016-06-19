@@ -1,17 +1,17 @@
-Todos.IndexController = Ember.ObjectController.extend({});
+Todos.IndexController = Ember.Controller.extend({});
 
-Todos.TodoController = Ember.ObjectController.extend({
-	isCompleted: function(key, value) {
+Todos.TodoController = Ember.Controller.extend({
+	is_completed: function(key, value) {
 		var model = this.get('model');
 
 		if (value === undefined) {
-			return model.get('isCompleted');			
+			return model.get('is_completed');
 		} else {
-			model.set('isCompleted', value);
+			model.set('is_completed', value);
 			model.save();
 			return value;
 		}
-	}.property('model.isCompleted'),
+	}.property('model.is_completed'),
 
 	actions: {
 		editTodo: function() {
@@ -20,7 +20,9 @@ Todos.TodoController = Ember.ObjectController.extend({
 		acceptChanges: function() {
 			this.set('isEditing', false);
 			var model = this.get('model');
-      			if (model.get('isSaving')) { return }
+			if (model.get('isSaving')) {
+				return;
+			}
 			if (Ember.isEmpty(this.get('model.title'))) {
 				this.send('removeTodo');
 			} else {
